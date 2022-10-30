@@ -2,11 +2,11 @@ package main;
 
 import state.Elevator;
 import state.Elv_States;
-
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         Scanner in = new Scanner(System.in);
 
@@ -21,8 +21,7 @@ public class Main {
         System.out.println("--------------------------------------------");
 
 
-        Elevator elv = new Elevator(dest_floor);
-
+        Elevator elv=new  Elevator(dest_floor);
 
     }
 

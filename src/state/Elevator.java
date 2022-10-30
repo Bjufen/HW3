@@ -41,17 +41,14 @@ public class Elevator {
         }
     }
 
-    private String announceFloor(int current_Floor){
-        switch(current_Floor){
-            case 1:
-                return "DING DING! Welcome to the 1st floor!";
-            case 2:
-                return "DING DING! Welcome to the 2nd floor!";
-            case 3:
-                return "DING DING! Welcome to the 3rd floor!";
-            default:
-                return "DING DING! Welcome to the "+current_Floor+"th floor!";
-        }
+    private String announceFloor(int current_Floor) {
+        String out = "DING DING! Welcome to the ";
+        return switch (current_Floor) {
+            case 1 -> out.concat("1st floor!");
+            case 2 -> out.concat("2nd floor!");
+            case 3 -> out.concat("3rd floor!");
+            default -> out.concat("" + current_Floor + "th floor!");
+        };
     }
 
 
